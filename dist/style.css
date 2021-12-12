@@ -12,15 +12,19 @@
 
 html {
   font-family: "Ubuntu", sans-serif;
-  font-size: 16px; }
+  font-size: 16px;
+  color: #444444; }
+
+li {
+  list-style: none; }
 
 .main {
   display: grid;
-  grid-template-columns: 3fr 1fr;
-  margin: auto; }
+  grid-template-columns: 3fr 1fr; }
 
 @media screen and (max-width: 660px) {
   .main {
+    display: block;
     max-width: auto; } }
 
 .planner-controls {
@@ -47,6 +51,7 @@ html {
 .row {
   display: grid;
   border: 1px solid #cccccc;
+  border-right-width: 0px;
   min-height: 80px;
   grid-template-columns: repeat(8, 1fr); }
 
@@ -58,7 +63,7 @@ html {
   margin: 0 1px;
   white-space: wrap;
   overflow: hidden;
-  min-width: 80px;
+  min-width: 70px;
   text-overflow: ellipsis;
   color: white; }
   .cell-text {
@@ -87,4 +92,28 @@ html {
   position: sticky;
   top: 0;
   min-height: 0; }
+
+.backlog {
+  background-color: #cccccc;
+  padding: 0 8px; }
+  .backlog-header {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 16px 0; }
+    .backlog-header p {
+      font-size: 32px;
+      text-align: center; }
+  .backlog-item {
+    padding: 8px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    margin-bottom: 8px; }
+    .backlog-item-title {
+      font-size: 20px;
+      color: #497dad; }
+
+@media screen and (max-width: 640px) {
+  .backlog {
+    display: none; } }
 

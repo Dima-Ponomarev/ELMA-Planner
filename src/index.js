@@ -1,6 +1,8 @@
 import "./scss/app.scss";
 import Planner from "./js/planner";
 import User from "./js/user";
+import Task from "./js/task";
+import Backlog from "./js/backlog";
 import moment from "moment";
 
 const fetchUsers = async () => {
@@ -38,9 +40,11 @@ const parseInitialData = (users, tasks) => {
     });
   });
 
+  const tasksCollection = availibleTasks.map((task) => new Task(task));
+
   return {
     userCollection,
-    backlog: availibleTasks,
+    tasksCollection,
   };
 };
 
@@ -50,6 +54,7 @@ const init = async () => {
   const tasks = await fetchTasks();
 
   const data = parseInitialData(users, tasks);
+  const backlog = new Backlog(data.tasksCollection);
   const table = new Planner(data.userCollection);
 };
 

@@ -29,6 +29,7 @@
 .row {
   display: grid;
   border: 1px solid $gray;
+  border-right-width: 0px;
   min-height: 80px;
   grid-template-columns: repeat(8, 1fr);
 }
@@ -41,7 +42,7 @@
   margin: 0 1px;
   white-space: wrap;
   overflow: hidden;
-  min-width: 80px;
+  min-width: 70px;
   text-overflow: ellipsis;
   color: white;
 
@@ -80,5 +81,5 @@
   min-height: 0;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 660px) {
 }

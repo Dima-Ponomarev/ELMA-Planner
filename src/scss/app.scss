@@ -4,6 +4,7 @@ $success: #49ad4b;
 $darkSuccess: #336e34;
 $gray: #cccccc;
 $darkGray: #444444;
+$lightGray: #f1f1f1;
 $info: #497dad;
 
 * {
@@ -15,18 +16,24 @@ $info: #497dad;
 html {
   font-family: "Ubuntu", sans-serif;
   font-size: 16px;
+  color: $darkGray;
+}
+
+li {
+  list-style: none;
 }
 
 .main {
   display: grid;
   grid-template-columns: 3fr 1fr;
-  margin: auto;
 }
 
 @media screen and (max-width: 660px) {
   .main {
+    display: block;
     max-width: auto;
   }
 }
 
 @import "planner";
+@import "backlog";
