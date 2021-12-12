@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+$success: #49ad4b;
+$darkSuccess: #336e34;
+$gray: #cccccc;
+$darkGray: #444444;
+$info: #497dad;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  margin: auto;
+}
+
+@media screen and (max-width: 660px) {
+  .main {
+    max-width: auto;
+  }
+}
+
+@import "planner";

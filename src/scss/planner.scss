@@ -1,0 +1,84 @@
+.planner {
+  &-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+    margin: 0 24px;
+  }
+
+  &-wrapper {
+    max-width: 1440px;
+    width: 100%;
+    min-width: 660px;
+  }
+}
+
+.button {
+  background-color: $success;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:active {
+    background-color: $darkSuccess;
+  }
+}
+
+.row {
+  display: grid;
+  border: 1px solid $gray;
+  min-height: 80px;
+  grid-template-columns: repeat(8, 1fr);
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2px;
+  margin: 0 1px;
+  white-space: wrap;
+  overflow: hidden;
+  min-width: 80px;
+  text-overflow: ellipsis;
+  color: white;
+
+  &-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.cell.active {
+  background-color: $info;
+}
+
+.name-cell {
+  text-align: center;
+  background-color: $success;
+  p {
+    white-space: normal;
+  }
+}
+
+.header-cell {
+  background-color: white;
+  color: $darkGray;
+  margin: 0;
+  padding: 8px 2px;
+  border-left: 1px solid $gray;
+  border-right: 1px solid $gray;
+}
+
+.header-row {
+  position: sticky;
+
+  top: 0;
+  min-height: 0;
+}
+
+@media screen and (max-width: 640px) {
+}
