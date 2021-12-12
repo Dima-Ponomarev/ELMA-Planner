@@ -1,12 +1,13 @@
 .backlog {
   background-color: $gray;
   padding: 0 8px;
+  min-height: 100vh;
   &-header {
     justify-content: center;
     align-items: center;
     width: 100%;
     padding: 16px 0;
-    p {
+    h2 {
       font-size: 32px;
       text-align: center;
     }
@@ -34,7 +35,7 @@
   visibility: hidden;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 860px) {
   .backlog {
     display: none;
   }

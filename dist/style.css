@@ -22,7 +22,7 @@ li {
   display: grid;
   grid-template-columns: 3fr 1fr; }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 860px) {
   .main {
     display: block;
     max-width: auto; } }
@@ -32,11 +32,10 @@ li {
   align-items: center;
   justify-content: space-between;
   padding: 16px 0;
+  max-width: 100vw;
   margin: 0 24px; }
 
-.planner-wrapper {
-  max-width: 1440px;
-  width: 100%;
+.table {
   min-width: 660px; }
 
 .button {
@@ -50,6 +49,8 @@ li {
 
 .row {
   display: grid;
+  position: relative;
+  z-index: 1;
   border: 1px solid #cccccc;
   border-right-width: 0px;
   min-height: 80px;
@@ -57,14 +58,13 @@ li {
 
 .cell {
   display: flex;
+  z-index: 1;
+  position: relative;
   align-items: center;
   justify-content: center;
   padding: 0 2px;
   margin: 0 1px;
-  white-space: wrap;
-  overflow: hidden;
-  min-width: 70px;
-  text-overflow: ellipsis;
+  min-width: 60px;
   color: white; }
   .cell-text {
     white-space: nowrap;
@@ -74,7 +74,23 @@ li {
     opacity: 0.5;
     background-color: #497dad; }
   .cell.active {
+    z-index: 1;
     background-color: #497dad; }
+  .cell .tooltip {
+    display: none;
+    padding: 4px 8px;
+    margin-bottom: 2px;
+    background-color: #444444;
+    max-width: 200px;
+    min-width: 100%;
+    text-align: center;
+    color: #cccccc;
+    border-radius: 5px; }
+  .cell:hover .tooltip {
+    display: inline;
+    position: absolute;
+    bottom: 100%;
+    z-index: 40; }
 
 .name-cell {
   text-align: center;
@@ -91,19 +107,40 @@ li {
   border-right: 1px solid #cccccc; }
 
 .header-row {
-  position: sticky;
-  top: 0;
+  position: relative;
   min-height: 0; }
+
+@media screen and (max-width: 660px) {
+  .planner-wrapper {
+    overflow: auto; }
+  .planner-controls {
+    margin: 0;
+    padding: 16px 4px;
+    position: sticky;
+    top: 0;
+    left: 0; }
+  .cell:hover .tooltip {
+    display: none; }
+  .name-cell {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 30;
+    margin-left: 0; }
+  .row {
+    border-right-width: 0;
+    border-left-width: 0; } }
 
 .backlog {
   background-color: #cccccc;
-  padding: 0 8px; }
+  padding: 0 8px;
+  min-height: 100vh; }
   .backlog-header {
     justify-content: center;
     align-items: center;
     width: 100%;
     padding: 16px 0; }
-    .backlog-header p {
+    .backlog-header h2 {
       font-size: 32px;
       text-align: center; }
   .backlog-item {
@@ -122,7 +159,7 @@ li {
 .invisible {
   visibility: hidden; }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 860px) {
   .backlog {
     display: none; } }
 

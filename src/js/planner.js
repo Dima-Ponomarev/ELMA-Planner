@@ -32,10 +32,11 @@ class Planner {
   renderTable = () => {
     const currentWeek = getWeekDates(this.currentStartDate);
 
+    //create header
     const headerRow = document.createElement("div");
     headerRow.className = "row header-row";
     const emptyCell = document.createElement("div");
-    emptyCell.className = "header-cell cell";
+    emptyCell.className = "header-cell cell name-cell";
     headerRow.append(emptyCell);
 
     for (let day = 0; day < 7; day++) {
@@ -51,6 +52,7 @@ class Planner {
 
     this.container.append(headerRow);
 
+    //create row for each user
     this.users.forEach((user) => {
       const row = user.createRow(currentWeek);
       this.container.append(row);

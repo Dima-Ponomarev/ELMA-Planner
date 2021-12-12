@@ -47,6 +47,12 @@ class User {
         );
       });
       if (dayTask) {
+        //create tooltip
+        const tooltip = document.createElement("div");
+        tooltip.className = "tooltip";
+        tooltip.innerText = dayTask.description || "Tooltip text";
+        dayCell.append(tooltip);
+
         dayCell.classList.add("active");
         const cellText = document.createElement("p");
         cellText.className = "cell-text";
@@ -112,6 +118,8 @@ class User {
     newRowChildren.forEach((element) => {
       currentRow.append(element);
     });
+
+    //TODO: check if user has planned task on chosen dates
 
     //remove event listeners
     e.target.removeEventListener("dragover", this.onDragOverCell);

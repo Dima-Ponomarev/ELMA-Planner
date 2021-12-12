@@ -6,13 +6,6 @@ class Backlog {
   }
 
   renderBacklog() {
-    const backlogHeader = document.createElement("h2");
-    backlogHeader.className = "backlog-header";
-    const backlogHeaderText = document.createElement("p");
-    backlogHeaderText.innerText = "Backlog";
-
-    backlogHeader.append(backlogHeaderText);
-
     const list = document.createElement("ul");
     list.className = "backlog-list";
 
@@ -21,7 +14,6 @@ class Backlog {
       list.append(listItem);
     });
 
-    this.container.append(backlogHeader);
     this.container.append(list);
   }
 }

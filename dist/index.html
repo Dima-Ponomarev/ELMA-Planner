@@ -6,22 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <script src="bundle.js" defer></script>
-    <title>Elma test task</title>
+    <title>Planner | ELMA</title>
   </head>
   <body>
     <main class="main">
       <section class="planner-wrapper">
         <div class="planner-controls">
           <div class="button button-prev">
-            <p class="button-text">Left</p>
+            <p class="button-text">Prev</p>
           </div>
           <div class="button button-next">
-            <p class="button-text">Right</p>
+            <p class="button-text">Next</p>
           </div>
         </div>
-        <div id="planner" class="planner"></div>
+        <div class="table">
+          <div id="planner" class="planner"></div>
+        </div>
       </section>
-      <section class="backlog" id="backlog"></section>
+      <section class="backlog" id="backlog">
+        <div class="backlog-header">
+          <h2>Backlog</h2>
+        </div>
+      </section>
     </main>
   </body>
 </html>
