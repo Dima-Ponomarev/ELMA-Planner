@@ -51,10 +51,13 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
-}
-
-.cell.active {
-  background-color: $info;
+  &.hovered {
+    opacity: 0.5;
+    background-color: $info;
+  }
+  &.active {
+    background-color: $info;
+  }
 }
 
 .name-cell {

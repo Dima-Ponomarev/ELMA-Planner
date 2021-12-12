@@ -17,12 +17,21 @@
     background-color: $lightGray;
     border-radius: 5px;
     margin-bottom: 8px;
+    cursor: pointer;
 
     &-title {
       font-size: 20px;
       color: $info;
     }
   }
+}
+
+.hold {
+  border: solid #000 4px;
+}
+
+.invisible {
+  visibility: hidden;
 }
 
 @media screen and (max-width: 640px) {

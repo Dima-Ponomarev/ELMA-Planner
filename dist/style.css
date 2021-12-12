@@ -70,9 +70,11 @@ li {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis; }
-
-.cell.active {
-  background-color: #497dad; }
+  .cell.hovered {
+    opacity: 0.5;
+    background-color: #497dad; }
+  .cell.active {
+    background-color: #497dad; }
 
 .name-cell {
   text-align: center;
@@ -108,10 +110,17 @@ li {
     padding: 8px;
     background-color: #f1f1f1;
     border-radius: 5px;
-    margin-bottom: 8px; }
+    margin-bottom: 8px;
+    cursor: pointer; }
     .backlog-item-title {
       font-size: 20px;
       color: #497dad; }
+
+.hold {
+  border: solid #000 4px; }
+
+.invisible {
+  visibility: hidden; }
 
 @media screen and (max-width: 640px) {
   .backlog {
