@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+    <title>DaData</title>
+  </head>
+  <body>
+    <div class="buffer"></div>
+
+    <div class="wrapper">
+      <div class="table__row table__header">
+        <p class="table__name">Название</p>
+        <p class="table__name">Количество</p>
+        <p class="table__name">Дата</p>
+        <p class="table__name">Оклад</p>
+        <p class="table__name"></p>
+      </div>
+      <div class="list-item__wrapper">
+        <div class="table__row">
+          <div class="list-item-container list-item__department">
+            <div class="list-item__arrow">
+              <svg
+                width="11"
+                height="6"
+                viewBox="0 0 11 6"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5.2664 0.152345L9.8914 4.73984C10.0383 4.88672 10.0383 5.12422 9.8914 5.27109L9.27265 5.88984C9.12578 6.03672 8.88828 6.03672 8.7414 5.88984L5.00077 2.18672L1.26015 5.88984C1.11327 6.03672 0.875773 6.03672 0.728899 5.88984L0.110149 5.27109C-0.036726 5.12422 -0.036726 4.88672 0.110149 4.73984L4.73515 0.152345C4.88202 0.0054698 5.11952 0.0054698 5.2664 0.152345Z"
+                />
+              </svg>
+            </div>
+            <div class="list-item__folder">
+              <svg
+                width="25"
+                height="16"
+                viewBox="0 0 25 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M22.9131 6.66667H20.834V4.66667C20.834 3.5625 19.9008 2.66667 18.7506 2.66667H11.8059L9.02807 0H2.0834C0.93319 0 0 0.895833 0 2V14C0 15.1042 0.93319 16 2.0834 16H19.4451C20.1612 16 20.8297 15.6458 21.2116 15.0583L24.6796 9.725C25.5477 8.39583 24.5494 6.66667 22.9131 6.66667ZM2.0834 2.25C2.0834 2.1125 2.20059 2 2.34383 2H8.16433L10.9422 4.66667H18.4902C18.6334 4.66667 18.7506 4.77917 18.7506 4.91667V6.66667H6.59744C5.86825 6.66667 5.19114 7.03333 4.81353 7.63333L2.0834 11.975V2.25ZM19.4451 14H3.1251L6.47591 8.66667H22.9174L19.4451 14Z"
+                />
+              </svg>
+            </div>
+            <div class="list-item__text-container">
+              <p class="list-item__text">ООО Элма</p>
+            </div>
+          </div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div class="list-item__actions"></div>
+        </div>
+        <div class="list-item__children">
+          <div class="list-item__wrapper">
+            <div class="table__row">
+              <div class="list-item-container list-item__department">
+                <div class="list-item__arrow">
+                  <svg
+                    width="11"
+                    height="6"
+                    viewBox="0 0 11 6"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.2664 0.152345L9.8914 4.73984C10.0383 4.88672 10.0383 5.12422 9.8914 5.27109L9.27265 5.88984C9.12578 6.03672 8.88828 6.03672 8.7414 5.88984L5.00077 2.18672L1.26015 5.88984C1.11327 6.03672 0.875773 6.03672 0.728899 5.88984L0.110149 5.27109C-0.036726 5.12422 -0.036726 4.88672 0.110149 4.73984L4.73515 0.152345C4.88202 0.0054698 5.11952 0.0054698 5.2664 0.152345Z"
+                    />
+                  </svg>
+                </div>
+                <div class="list-item__folder">
+                  <svg
+                    width="25"
+                    height="16"
+                    viewBox="0 0 25 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M22.9131 6.66667H20.834V4.66667C20.834 3.5625 19.9008 2.66667 18.7506 2.66667H11.8059L9.02807 0H2.0834C0.93319 0 0 0.895833 0 2V14C0 15.1042 0.93319 16 2.0834 16H19.4451C20.1612 16 20.8297 15.6458 21.2116 15.0583L24.6796 9.725C25.5477 8.39583 24.5494 6.66667 22.9131 6.66667ZM2.0834 2.25C2.0834 2.1125 2.20059 2 2.34383 2H8.16433L10.9422 4.66667H18.4902C18.6334 4.66667 18.7506 4.77917 18.7506 4.91667V6.66667H6.59744C5.86825 6.66667 5.19114 7.03333 4.81353 7.63333L2.0834 11.975V2.25ZM19.4451 14H3.1251L6.47591 8.66667H22.9174L19.4451 14Z"
+                    />
+                  </svg>
+                </div>
+                <div class="list-item__text-container">
+                  <p class="list-item__text">Отдел дизайна</p>
+                </div>
+              </div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div class="list-item__actions"></div>
+            </div>
+            <div class="list-item__children">
+              <div class="list-item__wrapper">
+                <div class="table__row">
+                  <div class="list-item-container list-item__position">
+                    <div class="list-item__arrow">
+                      <svg
+                        width="11"
+                        height="6"
+                        viewBox="0 0 11 6"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M5.2664 0.152345L9.8914 4.73984C10.0383 4.88672 10.0383 5.12422 9.8914 5.27109L9.27265 5.88984C9.12578 6.03672 8.88828 6.03672 8.7414 5.88984L5.00077 2.18672L1.26015 5.88984C1.11327 6.03672 0.875773 6.03672 0.728899 5.88984L0.110149 5.27109C-0.036726 5.12422 -0.036726 4.88672 0.110149 4.73984L4.73515 0.152345C4.88202 0.0054698 5.11952 0.0054698 5.2664 0.152345Z"
+                        />
+                      </svg>
+                    </div>
+                    <div class="list-item__folder">
+                      <svg
+                        width="25"
+                        height="16"
+                        viewBox="0 0 25 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M22.9131 6.66667H20.834V4.66667C20.834 3.5625 19.9008 2.66667 18.7506 2.66667H11.8059L9.02807 0H2.0834C0.93319 0 0 0.895833 0 2V14C0 15.1042 0.93319 16 2.0834 16H19.4451C20.1612 16 20.8297 15.6458 21.2116 15.0583L24.6796 9.725C25.5477 8.39583 24.5494 6.66667 22.9131 6.66667ZM2.0834 2.25C2.0834 2.1125 2.20059 2 2.34383 2H8.16433L10.9422 4.66667H18.4902C18.6334 4.66667 18.7506 4.77917 18.7506 4.91667V6.66667H6.59744C5.86825 6.66667 5.19114 7.03333 4.81353 7.63333L2.0834 11.975V2.25ZM19.4451 14H3.1251L6.47591 8.66667H22.9174L19.4451 14Z"
+                        />
+                      </svg>
+                    </div>
+                    <div class="list-item__text-container">
+                      <p class="list-item__text">Отдел дизайна</p>
+                    </div>
+                  </div>
+                  <div class="list-item__info-cell">1</div>
+                  <div class="list-item__info-cell">22.01.2019</div>
+                  <div class="list-item__info-cell">90000</div>
+                  <div class="list-item__actions"></div>
+                </div>
+                <div class="table__row">
+                  <div class="list-item-container list-item__position">
+                    <div class="list-item__arrow">
+                      <svg
+                        width="11"
+                        height="6"
+                        viewBox="0 0 11 6"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M5.2664 0.152345L9.8914 4.73984C10.0383 4.88672 10.0383 5.12422 9.8914 5.27109L9.27265 5.88984C9.12578 6.03672 8.88828 6.03672 8.7414 5.88984L5.00077 2.18672L1.26015 5.88984C1.11327 6.03672 0.875773 6.03672 0.728899 5.88984L0.110149 5.27109C-0.036726 5.12422 -0.036726 4.88672 0.110149 4.73984L4.73515 0.152345C4.88202 0.0054698 5.11952 0.0054698 5.2664 0.152345Z"
+                        />
+                      </svg>
+                    </div>
+                    <div class="list-item__folder">
+                      <svg
+                        width="25"
+                        height="16"
+                        viewBox="0 0 25 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M22.9131 6.66667H20.834V4.66667C20.834 3.5625 19.9008 2.66667 18.7506 2.66667H11.8059L9.02807 0H2.0834C0.93319 0 0 0.895833 0 2V14C0 15.1042 0.93319 16 2.0834 16H19.4451C20.1612 16 20.8297 15.6458 21.2116 15.0583L24.6796 9.725C25.5477 8.39583 24.5494 6.66667 22.9131 6.66667ZM2.0834 2.25C2.0834 2.1125 2.20059 2 2.34383 2H8.16433L10.9422 4.66667H18.4902C18.6334 4.66667 18.7506 4.77917 18.7506 4.91667V6.66667H6.59744C5.86825 6.66667 5.19114 7.03333 4.81353 7.63333L2.0834 11.975V2.25ZM19.4451 14H3.1251L6.47591 8.66667H22.9174L19.4451 14Z"
+                        />
+                      </svg>
+                    </div>
+                    <div class="list-item__text-container">
+                      <p class="list-item__text">Отдел дизайна</p>
+                    </div>
+                  </div>
+                  <div class="list-item__info-cell">1</div>
+                  <div class="list-item__info-cell">22.01.2019</div>
+                  <div class="list-item__info-cell">90000</div>
+                  <div class="list-item__actions"></div>
+                </div>
+                <div class="table__row">
+                  <div class="list-item-container list-item__position">
+                    <div class="list-item__arrow">
+                      <svg
+                        width="11"
+                        height="6"
+                        viewBox="0 0 11 6"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M5.2664 0.152345L9.8914 4.73984C10.0383 4.88672 10.0383 5.12422 9.8914 5.27109L9.27265 5.88984C9.12578 6.03672 8.88828 6.03672 8.7414 5.88984L5.00077 2.18672L1.26015 5.88984C1.11327 6.03672 0.875773 6.03672 0.728899 5.88984L0.110149 5.27109C-0.036726 5.12422 -0.036726 4.88672 0.110149 4.73984L4.73515 0.152345C4.88202 0.0054698 5.11952 0.0054698 5.2664 0.152345Z"
+                        />
+                      </svg>
+                    </div>
+                    <div class="list-item__folder">
+                      <svg
+                        width="25"
+                        height="16"
+                        viewBox="0 0 25 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M22.9131 6.66667H20.834V4.66667C20.834 3.5625 19.9008 2.66667 18.7506 2.66667H11.8059L9.02807 0H2.0834C0.93319 0 0 0.895833 0 2V14C0 15.1042 0.93319 16 2.0834 16H19.4451C20.1612 16 20.8297 15.6458 21.2116 15.0583L24.6796 9.725C25.5477 8.39583 24.5494 6.66667 22.9131 6.66667ZM2.0834 2.25C2.0834 2.1125 2.20059 2 2.34383 2H8.16433L10.9422 4.66667H18.4902C18.6334 4.66667 18.7506 4.77917 18.7506 4.91667V6.66667H6.59744C5.86825 6.66667 5.19114 7.03333 4.81353 7.63333L2.0834 11.975V2.25ZM19.4451 14H3.1251L6.47591 8.66667H22.9174L19.4451 14Z"
+                        />
+                      </svg>
+                    </div>
+                    <div class="list-item__text-container">
+                      <p class="list-item__text">Отдел дизайна</p>
+                    </div>
+                  </div>
+                  <div class="list-item__info-cell">1</div>
+                  <div class="list-item__info-cell">22.01.2019</div>
+                  <div class="list-item__info-cell">90000</div>
+                  <div class="list-item__actions"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
