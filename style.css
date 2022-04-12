@@ -36,12 +36,12 @@ body {
   width: 100%;
   display: grid;
   grid-template-columns: 8fr 2fr 2fr 2fr 1fr;
-  padding: 8px 0;
 
   cursor: pointer;
+  border-bottom: 1px solid #e8e8e8;
 }
 
-.table__row::after {
+/* .table__row::after {
   content: "";
   height: 1px;
   position: absolute;
@@ -49,7 +49,7 @@ body {
   width: 100%;
   left: 0;
   transform: translateY(28px);
-}
+} */
 
 .table__name {
   color: #000;
@@ -75,18 +75,19 @@ body {
   display: flex;
   align-items: center;
   padding-left: 27px;
+  padding: 8px 0;
 }
 
 .list-item__department {
 }
 
 .list-item__arrow {
-  transform: translateY(-4px);
+  transform: translateY(-2px);
 }
 
 .list-item__arrow svg {
   fill: #5e5e5e;
-  transform: rotate(90deg);
+  transform: rotate(180deg);
 }
 
 .list-item__arrow--active svg {
@@ -108,6 +109,7 @@ body {
   font-size: 15px;
   font-weight: 600;
   line-height: 22px;
+  user-select: none;
 }
 
 .list-item__position .list-item__text {
@@ -119,8 +121,15 @@ body {
   display: none;
 }
 
+.list-item__position .list-item__arrow svg {
+  fill: #1e6599;
+}
+
 .list-item__info-cell {
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .list-item__children {
@@ -129,4 +138,62 @@ body {
 
 .list-item__children--active {
   display: block;
+}
+
+.list-item__actions--enabled {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+.list-item__actions--enabled svg {
+  fill: #bfbfbf;
+}
+
+.list-item__actions--active {
+}
+
+.list-item__actions--active svg {
+  fill: #1e6599;
+}
+
+.list-item__options-popup {
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.1);
+  padding: 8px 0;
+
+  position: absolute;
+  transform: translate(-50%, 54%);
+  background: white;
+  z-index: 10;
+  display: none;
+}
+
+.list-item__options-popup--active {
+  display: block;
+}
+
+.option-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.option-list__item {
+  display: flex;
+  align-items: center;
+  padding: 8px 20px 6px;
+}
+
+.option-list__icon {
+  margin-right: 11px;
+}
+.option-list__text {
+  font-size: 16px;
+  line-height: 24px;
+  user-select: none;
 }
